@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Build a Survey Form</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+  </head>
+  <body>
+  
+    <div class="container">    
+
+    <form id="survey-form">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <div class="title">
+            <h1 class="title" id="title"><label>Social Media Survey</label></h1>
+        </div>    
+        
+        <div class="description">
+            <label><p id="description">Let Us Know Your Social Media Preferences</p></label>
+        </div>
+
+        <label class="name name-left left" for="name" id="name-label">* Name:</label>
+        <input class="name name-right right" autofocus type="text" id="name" name="user_name" placeholder="Enter Your Name" required>
+
+        <label class="email-left left" for="email" id="email-label">* Email:</label>
+        <input class="email-right right" autofocus type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+
+        <label class="age-left left" for="age" id="number-label">* Age:</label>
+        <input class="age-right right" type="number" id="number" name="age" min="14" max="125" placeholder="Enter Your Age">
+      
+      </fieldset> 
+      
+
+      <fieldset>
+      <legend>Information about your social media use and experience</legend>  
+
+        <label class="level-left left">What option best describes your level of social media expertise:</label>
+        <select class="level-right right" name="level" id="dropdown">
+          <option disabled value>Select an option</option>
+          <option value="No Experience">No Experience</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Expert">Expert</option>
+        </select>
+
+
+        <label class="time-left left">On average, how many hours per day do you spend on social media:</label>
+        
+        <div class="time-right right">
+          <div>
+            <input type="radio" id="Less than 1 hour a day" name="time" value="1" />
+            <label for="Less than 1 hour a day">Less than 1 hour a day</label>
+          </div>
+
+          <div>
+            <input type="radio" id="1 to 2 hours" name="time" value="2" />
+            <label for="1 to 2 hours">1 to 2 hours</label>
+          </div>
+          <div>
+            <input type="radio" id="2 to 3 hour" name="time" value="3" />
+            <label for="2 to 3 hour">2 to 3 hour</label>
+          </div>
+          <div>
+            <input type="radio" id="More than 3 hours a day" name="time" value="4" />
+            <label for="More than 3 hours a day">More than 3 hours a day</label>
+          </div>
+        </div>
+
+
+        <label class="why-left left">What is your primary use of social media:</label>
+        <select class="why-right right" name="why">
+          <option disabled value>Select an option</option>
+          <option value="Check the news headlines">Check the news headlines</option>
+          <option value="Stay in touch with family/friends">Stay in touch with family/friends</option>
+          <option value="For work">For work</option>
+        </select>
+
+
+        <label class="channels-left left">What social media channels to you use:</label>
+        <div class="channels-right right">
+          <input type="checkbox" name="social-channels" value="Facebook">Facebook<br>
+          <input type="checkbox" name="social-channels" value="Twitter">Twitter<br>
+          <input type="checkbox" name="social-channels" value="Instagram">Instagram<br>
+          <input type="checkbox" name="social-channels" value="LinkedIn">LinkedIn<br>
+          <input type="checkbox" name="social-channels" value="Pinterest">Pinterest<br>
+          <input type="checkbox" name="social-channels" value="YouTube">YouTube<br>
+          <input type="checkbox" name="social-channels" value="WhatsApp">WhatsApp<br>
+          <input type="checkbox" name="social-channels" value="Snapchat">Snapchat<br>
+        </div>
+
+
+        <label class="comments-left left">Comments:</label>
+        <textarea class="comments-right right" name="comment" onfocus="this.value=''">Enter comments here...</textarea>
+
+        <button class="submit" type="submit" id="submit" value="Submit">Submit</button>
+
+
+      </fieldset>
+
+    </form>
+
+    </div>
+  </body>
+</html>

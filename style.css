@@ -1,0 +1,274 @@
+body {
+	font-family: "Roboto", Grotesque, sans-serif;
+	background-color: hsla(214, 35%, 37%, 0.1);
+}
+
+:root {
+	--purple: #3d5a80;
+	--blue: #98c1d9;
+	--cyan: #e0fbfc;
+	--red: #ee6c4d;
+	--orange: #e99753;
+	--green: #69ba84;
+	--darkblue: #293241;
+	--gray: #333333;
+	--black: #191919;
+	--white: #ffffff;
+}
+
+/* FORM ELEMENTS */
+
+input[type="text"],
+select,
+textarea {
+	width: 65%;
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="email"],
+select,
+textarea {
+	width: 65%;
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+input[type="number"],
+select,
+textarea {
+	width: 65%;
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+fieldset {
+	display: contents;
+	border: 0;
+	padding: 0;
+	margin-left: 0px;
+} 
+
+fieldset legend {
+	position: absolute;
+	left: -5000px;
+}
+
+textarea {
+	width: 65%;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px solid;
+	border-color: hsl(0, 0%, 0%, 0.3);
+}
+
+.submit {
+	grid-area: submit;
+	justify-self: center;
+	background-color: hsla(214, 35%, 37%, 0.8);
+	border-radius: 5px;
+	color: var(--white);
+	font-size: 1em;
+	height: 10vh;
+	width: 45vw;
+	margin: 10px;
+	margin-top: 50px;
+	border: 1px solid;
+	margin-bottom: 6vh;
+}
+
+
+/* GRID STYLING */
+
+
+form {
+	display: grid;
+	padding: 2%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: var(--white);
+	border-radius: 5px;
+	grid-template-columns: minmax(200px, 1fr) 1fr;
+	grid-template-areas:
+		"title title"
+		"description description"
+		"name-left name-right"
+		"email-left email-right"
+		"age-left age-right"
+		"level-left level-right"
+		"time-left time-right"
+		"why-left why-right"
+		"channels-left channels-right"
+		"comments-left comments-right"
+		"submit submit";	
+    font-weight: 400;
+    grid-gap: 4vh 3vw;
+}
+
+
+.title {
+    grid-area: title;
+	text-align: center;
+}
+
+.description {
+    grid-area: description;
+    text-align: center;
+}
+
+.left {
+    text-align: right;
+}
+
+.name-left {
+    grid-area: name-left;
+}
+
+.name-right {
+    grid-area: name-right;
+}
+
+.email-left {
+	grid-area: email-left;
+}
+
+.email-right {
+	grid-area: email-right;
+}
+
+.age-left {
+	grid-area: age-left;
+}
+
+.age-right {
+	grid-area: age-right;
+}
+
+.level-left {
+	grid-area: level-left;
+}
+
+.level-right {
+	grid-area: level-right;
+}
+
+.time-left {
+	grid-area: time-left;
+}
+
+.time-right {
+	grid-area: time-right;
+}
+
+.why-left {
+	grid-area: why-left;
+}
+
+.why-right {
+	grid-area: why-right;
+}
+
+.channels-left {
+	grid-area: channels-left;
+}
+
+.channels-right {
+	grid-area: channels-right;
+}
+
+.comments-left {
+	grid-area: comments-left;
+}
+
+.comments-right {
+	grid-area: comments-right;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 812px) {
+	.form {
+		padding: 2%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+	form {
+		display: grid;
+		justify-items: left;
+		padding-left: 8%;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		margin-left: 6%;
+		margin-right: 6%;
+		background-color: var(--white);
+		border-radius: 5px;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			"title"
+			"description"
+			"name-left"
+			"name-right"
+			"email-left"
+			"email-right"
+			"age-left"
+			"age-right"
+			"level-left"
+			"level-right"
+			"time-left"
+			"time-right"
+			"why-left"
+			"why-right"
+			"channels-left"
+			"channels-right"
+			"comments-left"
+			"comments-right"
+			"submit";	
+		font-weight: 400;
+		grid-gap: 1vh 1vw;
+	}
+
+	.title {
+		padding-right: 7%;
+	}
+
+	.description {
+		padding-right: 7%;
+	}
+
+	.left {
+		text-align: left;
+	}
+
+	.right {
+		margin-bottom: 7%;
+	}
+
+	.submit {
+		grid-area: submit;
+		background-color: hsla(214, 35%, 37%, 0.8);
+		color: var(--white);
+		border-radius: 5px;
+		border: 1px solid;
+		font-size: 1em;
+		height: 7vh;
+		width: 60vw;
+		margin-top: 6vh;
+		margin-bottom: 3.5vh;
+		margin-right: 10%;
+		justify-content: center;
+	}
+
+}
+
